@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the target directory for the gf-patterns
-TARGET_DIR="$HOME/gf-pat"
+TARGET_DIR="$HOME/.gf"
 
 # Ensure the target directory exists
 mkdir -p "$TARGET_DIR"
