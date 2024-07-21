@@ -16,7 +16,7 @@ This script scans a list of URLs for Local File Inclusion (LFI) vulnerabilities 
 
 Ensure you have the following tools installed on your system:
 
-- `qsreplace`: Install via `pip install qsreplace`
+- `qsreplace`: Install via `go install github.com/tomnomnom/qsreplace@latest`
 - `curl`
 - `grep`
 
