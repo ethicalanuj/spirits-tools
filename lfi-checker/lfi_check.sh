@@ -8,11 +8,11 @@ delay=0  # No delay by default
 
 # Help function
 usage() {
-  echo "Usage: $0 [-u url_file] [-p payload_file] [-o output_file] [-d delay]"
+  echo "Usage: $0 [-u url_file] [-p payload_file] [-o output_file] [-d delay_ms]"
   echo "  -u url_file      File containing URLs (default: lfi-urls.txt)"
   echo "  -p payload_file  File containing LFI payloads (default: payloads.txt)"
   echo "  -o output_file   File to save the output (default: output.txt)"
-  echo "  -d delay         Delay in seconds between requests (default: 0)"
+  echo "  -d delay_ms      Delay in milliseconds between requests (default: 0)"
   exit 1
 }
 
@@ -70,8 +70,8 @@ while read -r url; do
     echo "----------------------------------------"
     echo "----------------------------------------" >> "$output_file"
 
-    # Delay between requests
-    sleep "$delay"
+    # Delay between requests in milliseconds
+    sleep $(echo "scale=3; $delay / 1000" | bc)
     
   done < "$payload_file"
 done < "$url_file"

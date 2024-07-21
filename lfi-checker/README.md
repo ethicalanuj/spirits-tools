@@ -32,11 +32,11 @@ chmod u+x lfi_check.sh
 ./lfi_check.sh -h
 ```
 ```sh
-Usage: ./lfi-checker/lfi_check.sh [-u url_file] [-p payload_file] [-o output_file] [-d delay]
+Usage: ./lfi_check.sh [-u url_file] [-p payload_file] [-o output_file] [-d delay]
   -u url_file      File containing URLs (default: lfi-urls.txt)
   -p payload_file  File containing LFI payloads (default: payloads.txt)
   -o output_file   File to save the output (default: output.txt)
-  -d delay         Delay in seconds between requests (default: 0)
+  -d delay         Delay in ms between requests (default: 0)
   ```
 
 **Example :**
